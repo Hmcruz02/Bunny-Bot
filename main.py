@@ -22,4 +22,8 @@ async def add(ctx, num1:int, num2:int):
 async def bunnyjam(ctx):
     await ctx.reply('https://tenor.com/view/bunny-rabbit-vibe-dance-7tv-gif-25070294')
 
+@bot.command()
+async def bunnysmile(ctx):
+    await ctx.reply('https://i.kym-cdn.com/photos/images/masonry/001/999/882/fe1.gif')
+    
 bot.run(getenv('TOKEN'))
