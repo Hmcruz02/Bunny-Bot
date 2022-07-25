@@ -22,7 +22,7 @@ async def shutdown(ctx):
 #this command says Hello! with the respond time
 @bot.command(name='1hello')
 async def one_hello(ctx):
-    await ctx.reply('Hello! ' + str(round(bot.latency * 1000)) + ' ms')
+    await ctx.reply(f'Hello! {round(bot.latency * 1000)} ms')
 
 #this command says Howdy Howdy!
 @bot.command(name='2hello')
