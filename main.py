@@ -10,8 +10,14 @@ bot = commands.Bot(command_prefix="!")
 @bot.event
 async def on_ready():
     print('Bunny Bot has arrived!')
-    general_channel = bot.get_channel(1000902793894309949)
-    await general_channel.send(f'{bot.user.name} is up and bouncing!')
+    testing_channel = bot.get_channel(int(getenv('TESTING_CHANNEL')))
+    await testing_channel.send(f'{bot.user.name} is up and bouncing!')
+
+#This command will shutdown the bot
+@bot.command()
+async def shutdown(ctx):
+    await ctx.reply(f'{bot.user.name} is going to sleep zzz')
+    await bot.close()
 
 #this command says Hello! with the respond time
 @bot.command(name='1hello')
