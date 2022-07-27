@@ -28,6 +28,7 @@ class Admin(commands.Cog):
         elif isinstance(error, commands.MissingPermissions):
             await ctx.send('You do not have permission to use this command.')
         else:
+            print(error)
             await ctx.send('An Error has occured.')
 
     @commands.command() #this is used for commands
