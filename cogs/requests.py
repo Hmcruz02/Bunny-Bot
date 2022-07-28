@@ -6,13 +6,13 @@ class Requests(commands.Cog):
         self.bot = bot
 
     #this command says Hello! with the respond time
-    @commands.command(name='1hello')
-    async def one_hello(self, ctx):
-        await ctx.reply(f'Hello! {round(self.bot.latency * 1000)} ms')
+    @commands.command(name='ping')
+    async def ping(self, ctx):
+        await ctx.reply(f'pong {round(self.bot.latency * 1000)} ms')
 
     #this command says Howdy Howdy!
-    @commands.command(name='2hello')
-    async def two_hello(self, ctx):
+    @commands.command()
+    async def hello(self, ctx):
         await ctx.reply('Howdy Howdy!')
 
     #this command adds two numbers and returns the sum
