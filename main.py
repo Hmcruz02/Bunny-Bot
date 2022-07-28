@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from os import getenv
 load_dotenv()
 
-#This class is to create and embedded help command
+#This class is to create an embedded help command
 class MyHelpCommand(commands.HelpCommand):
 
 
