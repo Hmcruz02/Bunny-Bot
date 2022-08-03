@@ -30,7 +30,7 @@ class MyHelpCommand(commands.HelpCommand):
         embed.set_footer(text="Fluffy Inc.")
         await self.get_destination().send(embed=embed)
 
-bot = commands.Bot(command_prefix="!", help_command= MyHelpCommand())
+bot = commands.Bot(command_prefix="!", help_command= MyHelpCommand(), intents = discord.Intents.all())
 
 #loads in an extension
 @bot.command()
